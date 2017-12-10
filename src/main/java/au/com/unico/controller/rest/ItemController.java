@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
 @RequestMapping("/item")
 public class ItemController {
     private Logger logger = LoggerFactory.getLogger(getClass());
-    private static final String PUSH_STATE_SUCCESSFUL = "Successful";
-    private static final String PUSH_STATE_FAILED = "Failed";
+    public static final String PUSH_STATE_SUCCESSFUL = "Successful";
+    public static final String PUSH_STATE_FAILED = "Failed";
 
     @Autowired
     private JMSProducer jmsProducer;
