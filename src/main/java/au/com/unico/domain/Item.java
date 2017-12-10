@@ -1,4 +1,4 @@
-package com.unico.domain;
+package au.com.unico.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

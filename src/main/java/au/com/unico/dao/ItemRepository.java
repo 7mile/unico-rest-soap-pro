@@ -1,6 +1,6 @@
-package com.unico.dao;
+package au.com.unico.dao;
 
-import com.unico.domain.Item;
+import au.com.unico.domain.Item;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
