@@ -1,8 +1,8 @@
-package com.unico.message.consumer;
+package au.com.unico.message.consumer;
 
-import com.unico.dao.ItemRepository;
-import com.unico.domain.Item;
-import com.unico.message.JMSConfiguration;
+import au.com.unico.dao.ItemRepository;
+import au.com.unico.domain.Item;
+import au.com.unico.message.JMSConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.unico.message.producer;
+package au.com.unico.message.producer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

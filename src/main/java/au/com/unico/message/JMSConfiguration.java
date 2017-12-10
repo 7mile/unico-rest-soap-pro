@@ -1,4 +1,4 @@
-package com.unico.message;
+package au.com.unico.message;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
