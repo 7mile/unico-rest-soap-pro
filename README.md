@@ -66,8 +66,9 @@ get the gcd from the queue
 
 curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
 
-to access gcdList() service change <gs:getGcdListRequest> to <gs:getGcdListRequest>
-to access gcdList() service change <gs:getGcdSumRequest> to <gs:getGcdSumRequest>
+To access gcdList() service change ```<gs:getGcdListRequest>``` to ```<gs:getGcdListRequest>```
+
+To access gcdList() service change <gs:getGcdSumRequest> to <gs:getGcdSumRequest>
 
 #Trouble Shooting:
 
