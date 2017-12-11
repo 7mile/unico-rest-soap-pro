@@ -54,11 +54,17 @@ Create a file named request.xml, like below:
 
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 				  xmlns:gs="http://www.unico.com.au/gcd-ws">
+
    <soapenv:Header/>
+
    <soapenv:Body>
+
       <gs:getGcdRequest>
+
       </gs:getGcdRequest>
+
    </soapenv:Body>
+
 </soapenv:Envelope>
 
 get the gcd from the queue
