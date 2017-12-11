@@ -11,6 +11,11 @@ calculated GCD list from database and get the sum of all calculated GCD list thr
 In order to keep thread-safety and the order when getting 2 messages from the JMS Queue, use synchronized
 to ensure every request get the correct 2 messages from the head of the JMS Queue.
 
+# Used Technology:
+    Java 8, Spring Boot, Spring MVC, Spring, JPA, Hibernate, ActiveMQ, H2 database, Spring-WS, JUnit,
+    Mockito, Spring Test, Tomcat
+
+
 # Building:
 
 Check out the code using command:
@@ -19,14 +24,17 @@ git clone https://github.com/7mile/unico-rest-soap-pro directory-cloned-into
 Navigate to the directory-cloned-into and run command:
 mvn package
 
+This project can be built into jar or war file, the default is war file.
+
 This will run all tests and build the application into:
-directory-cloned-into/target/rest-soap-service-0.1.0.jar
+directory-cloned-into/target/rest-soap-service-0.1.0.war
 
 # Running:
 
-In the directory-cloned-into/target
+unzip directory-cloned-into/target/rest-soap-service-0.1.0.war to tomcat's webapps directory,like:
+apache-tomcat-8.0.24\webapps\ROOT
 
-Run command: java -jar rest-soap-service-0.1.0.jar
+Run command: ./apache-tomcat-8.0.24/bin/start.sh
 
 # User Example :
 Push 2 integers to the Application using curl:
