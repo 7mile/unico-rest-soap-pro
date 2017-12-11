@@ -19,9 +19,11 @@ to ensure every request get the correct 2 messages from the head of the JMS Queu
 # Building:
 
 Check out the code using command:
+
 git clone https://github.com/7mile/unico-rest-soap-pro directory-cloned-into
 
 Navigate to the directory-cloned-into and run command:
+
 mvn package
 
 This project can be built into jar or war file, the default is war file.
@@ -38,14 +40,18 @@ Run command: ./apache-tomcat-8.0.24/bin/start.sh
 
 # User Example :
 Push 2 integers to the Application using curl:
+
     curl -d "i1=10&i2=20" http://localhost:8080/item/push
 
 Get a list of all the elements ever pushed to the Application using curl:
+
     curl http://localhost:8080/item/all
 
 
 Access SOAP Service:
+
 Create a file named request.xml, like below:
+
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 				  xmlns:gs="http://www.unico.com.au/gcd-ws">
    <soapenv:Header/>
@@ -56,6 +62,7 @@ Create a file named request.xml, like below:
 </soapenv:Envelope>
 
 get the gcd from the queue
+
 curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
 
 to access gcdList() service change <gs:getGcdListRequest> to <gs:getGcdListRequest>
