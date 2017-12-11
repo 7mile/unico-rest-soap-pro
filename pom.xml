@@ -14,7 +14,7 @@
     <groupId>com.unico</groupId>
     <artifactId>rest-soap-service</artifactId>
     <version>0.1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>rest-soap-pro</name>
     <description>An enterprise Java application that implements RESTful and SOAP web services that is secure.
@@ -68,7 +68,12 @@
             <groupId>org.springframework.ws</groupId>
             <artifactId>spring-ws-test</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+            <!--scope>provided</scope-->
+        </dependency>
     </dependencies>
 
     <build>

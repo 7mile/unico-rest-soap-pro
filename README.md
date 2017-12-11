@@ -25,8 +25,6 @@ In the directory-cloned-into/target
 
 Run command: java -jar rest-soap-service-0.1.0.jar
 
-Open in browser：http://localhost:8080
-
 # User Example:
 Push 2 integers to the Application using curl:
     curl -d "i1=10&i2=20" http://localhost:8080/item/push
