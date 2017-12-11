@@ -28,6 +28,10 @@ public class GcdServiceImpl implements GcdService {
         this.consumer = consumer;
     }
 
+    /**
+     * This method get 2 messages from the JMS Queue and calculate the gcd of them
+     * @return Optional<Integer> returns the optional result of gcd
+     */
     @Override
     public Optional<Integer> getGcd() {
         Optional<Integer[]> params = getTwoMessagesFromQueue();
@@ -55,6 +59,11 @@ public class GcdServiceImpl implements GcdService {
         return Optional.of(result);
     }
 
+    /**
+     * This method get 2 messages from the JMS Queue. In order to keep thread-safety and the order
+     * when getting 2 messages, use synchronized on the method signature
+     * @return Optional<Integer> returns the optional result of gcd
+     */
     private synchronized Optional<Integer[]> getTwoMessagesFromQueue() {
         try {
             Integer i1 = Integer.parseInt((String) consumer.getMessage());
@@ -66,6 +75,10 @@ public class GcdServiceImpl implements GcdService {
         }
     }
 
+    /**
+     * This method used Euclidean algorithm to calculate gcd of 2 integers
+     * @return int returns the gcd of the 2 params
+     */
     private int gcd(Integer a, Integer b) {
         if (b == 0) {
             return a;
