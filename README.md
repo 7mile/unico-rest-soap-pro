@@ -51,7 +51,7 @@ Get a list of all the elements ever pushed to the Application using curl:
 Access SOAP Service:
 
 Create a file named request.xml, like below:
-
+```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 				  xmlns:gs="http://www.unico.com.au/gcd-ws">
 
@@ -66,6 +66,7 @@ Create a file named request.xml, like below:
    </soapenv:Body>
 
 </soapenv:Envelope>
+```
 
 get the gcd from the queue
 
