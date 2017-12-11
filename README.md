@@ -26,7 +26,7 @@ Navigate to the directory-cloned-into and run command:
 
 mvn package
 
-This project can be built into jar or war file, the default is war file.
+This project can be packaged into jar or war file, and war file is the default choice.
 
 This will run all tests and build the application into:
 directory-cloned-into/target/rest-soap-service-0.1.0.war
@@ -62,7 +62,7 @@ Create a file named request.xml, like below:
 </soapenv:Envelope>
 ```
 
-get the gcd from the queue
+To get the gcd from the queue, use command:
 
 curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
 
