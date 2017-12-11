@@ -84,9 +84,8 @@ public class ItemControllerTest {
 
     @Test
     public void testListWithOneResult() throws Exception {
-        Item item = new Item();
+        Item item = new Item(1);
         item.setId(1L);
-        item.setNumber(1);
         when(itemRepository.findAll()).thenReturn(Arrays.asList(item));
 
         mockMvc.perform(get("/item/all"))
