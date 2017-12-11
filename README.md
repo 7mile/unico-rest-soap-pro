@@ -8,6 +8,9 @@ databases are also supported).
 Users can get the Greatest Common Divisor (GCD) of 2 integers from the head of the Queue, get the
 calculated GCD list from database and get the sum of all calculated GCD list through SOAP web services.
 
+In order to keep thread-safety and the order when getting 2 messages from the JMS Queue, use synchronized
+to ensure every request get the correct 2 messages from the head of the JMS Queue.
+
 # Building:
 
 Check out the code using command:
@@ -25,10 +28,27 @@ In the directory-cloned-into/target
 
 Run command: java -jar rest-soap-service-0.1.0.jar
 
-# User Example:
+# User Example :
 Push 2 integers to the Application using curl:
     curl -d "i1=10&i2=20" http://localhost:8080/item/push
 
 Get a list of all the elements ever pushed to the Application using curl:
     curl http://localhost:8080/item/all
 
+
+Access SOAP Service:
+Create a file named request.xml, like below:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://www.unico.com.au/gcd-ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getGcdRequest>
+      </gs:getGcdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+get the gcd from the queue
+curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
+
+to access gcdList() service change <gs:getGcdListRequest> to <gs:getGcdListRequest>
+to access gcdList() service change <gs:getGcdSumRequest> to <gs:getGcdSumRequest>
