@@ -12,9 +12,16 @@ import javax.persistence.Id;
 @Entity
 public class Item {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Integer number;
+
+    public Item() {
+    }
+
+    public Item(Integer number) {
+        this.number = number;
+    }
 
     public Long getId() {
         return id;
