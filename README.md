@@ -13,7 +13,7 @@ to ensure every request get the correct 2 messages from the head of the JMS Queu
 
 # Used Technology:
     Java 8, Spring Boot, Spring MVC, Spring, JPA, Hibernate, ActiveMQ, H2 database, Spring-WS, JUnit,
-    Mockito, Spring Test, Tomcat
+    Mockito, Spring Test, Tomcat, Logback
 
 
 # Building:
@@ -60,3 +60,9 @@ curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
 
 to access gcdList() service change <gs:getGcdListRequest> to <gs:getGcdListRequest>
 to access gcdList() service change <gs:getGcdSumRequest> to <gs:getGcdSumRequest>
+
+#Trouble Shooting:
+
+This application use logback to do logging.
+You can find the log file in log directory with name unico-rest-soap.log.
+You can also set the log level in the file application.properties(in directory src/main/resources).
